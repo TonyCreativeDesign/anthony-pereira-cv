@@ -1,6 +1,6 @@
 /* ============================================================
    TONY CREATIVE DESIGN — CV / PORTFOLIO
-   v2 · Editorial · Award-grade
+   v2.1 · Editorial · Four-mode
    Interactive layer
    ============================================================ */
 
@@ -31,12 +31,18 @@
     const pill = document.querySelector('.mode-pill');
     const root = document.body;
     const html = document.documentElement;
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
 
     const modeMap = {
       creative: {
         heroTitle: "Directeur artistique digital · Webdesigner · Designer augmenté par l'IA",
         heroDesc:  "Identité visuelle, webdesign, UX/UI, interfaces no-code, automatisations et prototypage assisté par IA. Bordeaux.",
         badge: 'Profil créatif',
+        themeColor: '#08080F',
+        aboutTitle: 'Une vision design',
+        aboutEm: "augmentée par l'IA",
+        projectsKicker: 'PROJETS · SÉLECTION',
+        projectsTitle: 'Sélection de projets',
         projectsEm: 'créatifs &amp; digitaux',
         projectsLead: 'Sélection de projets créatifs, artistiques et digitaux — branding, sites, interfaces et œuvres sur mesure.'
       },
@@ -44,6 +50,11 @@
         heroTitle: 'Studio indépendant · Marque mère de Graphikly &amp; IA-CreativeDesign',
         heroDesc:  "Tony Creative Design porte deux offres B2B : Graphikly pour le design graphique en abonnement, et IA-CreativeDesign pour les robots métier, assistants IA et automatisations no-code.",
         badge: 'Business',
+        themeColor: '#F4F4EF',
+        aboutTitle: 'Une vision design',
+        aboutEm: "augmentée par l'IA",
+        projectsKicker: 'PROJETS · SÉLECTION',
+        projectsTitle: 'Sélection de projets',
         projectsEm: 'B2B · Graphikly &amp; IACD',
         projectsLead: "Deux offres B2B portées par le studio : Graphikly (design en abonnement) et IA-CreativeDesign (IA appliquée aux métiers)."
       },
@@ -51,8 +62,25 @@
         heroTitle: 'Créatif · Co-constructeur · Explorateur digital',
         heroDesc:  "Ouvert aux collaborations, aux projets communs et aux idées ambitieuses autour du design, du web et de l'IA. Transformons une vision en réalité digitale.",
         badge: 'Collaboration',
+        themeColor: '#08060F',
+        aboutTitle: 'Une vision design',
+        aboutEm: "augmentée par l'IA",
+        projectsKicker: 'PROJETS · SÉLECTION',
+        projectsTitle: 'Sélection de projets',
         projectsEm: 'co-créés &amp; exploratoires',
         projectsLead: 'Projets collaboratifs, exploratoires et artistiques — co-créations et aventures partagées.'
+      },
+      ai: {
+        heroTitle: "Formateur en intelligence artificielle · Designer augmenté par l'IA",
+        heroDesc: "Formation aux usages professionnels de l'IA générative : ChatGPT, Claude, Gemini, prompting, productivité, création de contenus, automatisation et développement assisté par IA.",
+        badge: 'IA · Formation',
+        themeColor: '#06100D',
+        aboutTitle: "Transmettre l'IA",
+        aboutEm: 'par la pratique',
+        projectsKicker: 'DOMAINES · INTERVENTION IA',
+        projectsTitle: "Domaines d'intervention",
+        projectsEm: 'IA &amp; formation',
+        projectsLead: "Transmission, expérimentation et intégration concrète de l'IA dans les métiers, avec une approche pratique, responsable et orientée usages."
       }
     };
 
@@ -70,6 +98,11 @@
       collab: [
         { text: 'Proposer une collaboration', href: '#contact', cls: 'btn btn-primary', arrow: true },
         { text: 'Échanger par email',         href: 'mailto:tony_creativedesign@icloud.com', cls: 'btn btn-ghost' }
+      ],
+      ai: [
+        { text: 'Voir mon profil formateur', href: 'https://senza-formations.com/formateur/profil-606-anthony', cls: 'btn btn-primary', arrow: true, external: true },
+        { text: 'Explorer mes compétences IA', href: '#skills', cls: 'btn btn-ghost' },
+        { text: 'Me contacter', href: '#contact', cls: 'btn btn-ghost' }
       ]
     };
 
@@ -98,6 +131,7 @@
         const active = b.dataset.modeBtn === mode;
         b.classList.toggle('active', active);
         b.setAttribute('aria-selected', active ? 'true' : 'false');
+        b.setAttribute('tabindex', active ? '0' : '-1');
       });
       const activeBtn = document.querySelector(`[data-mode-btn="${mode}"]`);
       requestAnimationFrame(() => positionPill(activeBtn));
@@ -127,18 +161,45 @@
       const titleEl = document.getElementById('hero-title');
       const descEl  = document.getElementById('hero-desc');
       const badgeEl = document.querySelector('#hero-badge .hero-eyebrow-text');
+      const aboutTitle = document.getElementById('about-title-main');
+      const aboutEm = document.getElementById('about-title-em');
+      const projectsKicker = document.getElementById('projects-kicker');
+      const projectsTitle = document.getElementById('projects-title-main');
       const projectsEm   = document.getElementById('projects-em');
       const projectsLead = document.getElementById('projects-lead');
 
-      await Promise.all([fadeOut(titleEl), fadeOut(descEl), fadeOut(badgeEl), fadeOut(projectsEm), fadeOut(projectsLead)]);
+      await Promise.all([
+        fadeOut(titleEl),
+        fadeOut(descEl),
+        fadeOut(badgeEl),
+        fadeOut(aboutTitle),
+        fadeOut(aboutEm),
+        fadeOut(projectsKicker),
+        fadeOut(projectsTitle),
+        fadeOut(projectsEm),
+        fadeOut(projectsLead)
+      ]);
 
       if (titleEl) titleEl.innerHTML = data.heroTitle;
       if (descEl)  descEl.textContent  = data.heroDesc;
       if (badgeEl) badgeEl.textContent = data.badge;
+      if (aboutTitle) aboutTitle.textContent = data.aboutTitle;
+      if (aboutEm) aboutEm.textContent = data.aboutEm;
+      if (projectsKicker) projectsKicker.textContent = data.projectsKicker;
+      if (projectsTitle) projectsTitle.textContent = data.projectsTitle;
       if (projectsEm)   projectsEm.innerHTML   = data.projectsEm;
       if (projectsLead) projectsLead.textContent = data.projectsLead;
+      if (themeMeta && data.themeColor) themeMeta.setAttribute('content', data.themeColor);
 
-      fadeIn(titleEl); fadeIn(descEl); fadeIn(badgeEl); fadeIn(projectsEm); fadeIn(projectsLead);
+      fadeIn(titleEl);
+      fadeIn(descEl);
+      fadeIn(badgeEl);
+      fadeIn(aboutTitle);
+      fadeIn(aboutEm);
+      fadeIn(projectsKicker);
+      fadeIn(projectsTitle);
+      fadeIn(projectsEm);
+      fadeIn(projectsLead);
     }
 
     async function setCTAs(mode) {
@@ -199,6 +260,22 @@
 
     buttons.forEach(b => {
       b.addEventListener('click', () => setMode(b.dataset.modeBtn));
+      b.addEventListener('keydown', e => {
+        const keys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'];
+        if (!keys.includes(e.key)) return;
+        e.preventDefault();
+        const current = Array.from(buttons).indexOf(b);
+        const last = buttons.length - 1;
+        let next = current;
+        if (e.key === 'Home') next = 0;
+        if (e.key === 'End') next = last;
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = current <= 0 ? last : current - 1;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = current >= last ? 0 : current + 1;
+        const nextBtn = buttons[next];
+        if (!nextBtn) return;
+        nextBtn.focus();
+        setMode(nextBtn.dataset.modeBtn);
+      });
     });
 
     // Initialize pill position immediately (avoid first-paint flash on slow devices)
@@ -214,6 +291,9 @@
           if (pill) pill.style.transition = '';
         });
       });
+    }
+    if (themeMeta && modeMap[initial]?.themeColor) {
+      themeMeta.setAttribute('content', modeMap[initial].themeColor);
     }
 
     window.addEventListener('resize', () => {

@@ -1,6 +1,6 @@
 # Tony Creative Design — CV Portfolio
 
-CV / Portfolio web dynamique, futuriste et premium pour **Anthony PEREIRA** (Tony Creative Design).
+CV / Portfolio web dynamique, futuriste et premium pour **Anthony PEREIRA** (Tony Creative Design), incluant son positionnement de formateur en intelligence artificielle.
 
 ## Ouverture locale
 
@@ -28,7 +28,7 @@ Configuration attendue : branche `main`, dossier racine `/`.
 ```
 CV/
 ├── index.html      — Page principale
-├── style.css       — Design system & styles (3 modes)
+├── style.css       — Design system & styles (4 modes)
 ├── script.js       — Logique interactive
 ├── README.md       — Ce fichier
 └── assets/
@@ -38,12 +38,13 @@ CV/
 
 ## Fonctionnalités
 
-- **3 modes visuels** : Profil créatif · Business · Collaboration
+- **4 modes visuels** : Profil créatif · Business · Collaboration · IA & Formation
 - Design futuriste premium
 - Responsive mobile / tablette / desktop
 - Micro-animations & transitions fluides
 - Timeline expériences
 - Grille projets
+- Domaines d'intervention IA & formation
 - Badges compétences
 - Navigation fixe
 - Scroll reveal

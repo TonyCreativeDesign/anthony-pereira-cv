@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Anthony PEREIRA — Tony Creative Design | Directeur artistique digital</title>
-<meta name="description" content="CV & Portfolio de Tony Creative Design — Directeur artistique digital, webdesigner et designer augmenté par l'IA. Bordeaux.">
+<title>Anthony PEREIRA — CV Portfolio | Design &amp; formation IA</title>
+<meta name="description" content="CV &amp; Portfolio d'Anthony Pereira — directeur artistique digital, webdesigner, formateur en intelligence artificielle et designer augmenté par l'IA. Bordeaux.">
 <meta name="theme-color" content="#08080F">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -48,7 +48,7 @@
       <span class="status-text">Disponible · 2026</span>
     </div>
 
-    <button class="nav-burger" aria-label="Menu" aria-expanded="false">
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -113,17 +113,17 @@
       <div class="hero-stats">
         <div class="hero-stat">
           <span class="hero-stat-num">04<em>+</em></span>
-          <span class="hero-stat-label">années<br>freelance</span>
+          <span class="hero-stat-label">années <br>freelance</span>
         </div>
         <div class="hero-stat-sep" aria-hidden="true"></div>
         <div class="hero-stat">
           <span class="hero-stat-num">20<em>+</em></span>
-          <span class="hero-stat-label">projets<br>livrés</span>
+          <span class="hero-stat-label">projets <br>livrés</span>
         </div>
         <div class="hero-stat-sep" aria-hidden="true"></div>
         <div class="hero-stat">
           <span class="hero-stat-num">03</span>
-          <span class="hero-stat-label">marques<br>actives</span>
+          <span class="hero-stat-label">marques <br>actives</span>
         </div>
       </div>
     </div>
@@ -168,27 +168,34 @@
       <span class="mode-switcher-marker" aria-hidden="true"></span>
       <span class="mode-switcher-label">SÉLECTIONNER UN ANGLE DE LECTURE</span>
     </div>
-    <div class="mode-switcher" role="tablist">
+    <div class="mode-switcher" role="tablist" aria-label="Angles de lecture du CV">
       <span class="mode-pill" aria-hidden="true"></span>
-      <button class="mode-btn active" data-mode-btn="creative" role="tab" aria-selected="true">
+      <button class="mode-btn active" type="button" data-mode-btn="creative" role="tab" aria-selected="true" tabindex="0">
         <span class="mode-btn-num">01</span>
         <span class="mode-btn-text">
           <span class="mode-btn-label">Profil créatif</span>
           <span class="mode-btn-sub">Directeur artistique digital</span>
         </span>
       </button>
-      <button class="mode-btn" data-mode-btn="business" role="tab" aria-selected="false">
+      <button class="mode-btn" type="button" data-mode-btn="business" role="tab" aria-selected="false" tabindex="-1">
         <span class="mode-btn-num">02</span>
         <span class="mode-btn-text">
           <span class="mode-btn-label">Business</span>
           <span class="mode-btn-sub">Studio · Offres B2B</span>
         </span>
       </button>
-      <button class="mode-btn" data-mode-btn="collab" role="tab" aria-selected="false">
+      <button class="mode-btn" type="button" data-mode-btn="collab" role="tab" aria-selected="false" tabindex="-1">
         <span class="mode-btn-num">03</span>
         <span class="mode-btn-text">
           <span class="mode-btn-label">Collaboration</span>
           <span class="mode-btn-sub">Co-création · Aventures</span>
+        </span>
+      </button>
+      <button class="mode-btn" type="button" data-mode-btn="ai" role="tab" aria-selected="false" tabindex="-1">
+        <span class="mode-btn-num">04</span>
+        <span class="mode-btn-text">
+          <span class="mode-btn-label">IA &amp; Formation</span>
+          <span class="mode-btn-sub">Formateur · Usages professionnels</span>
         </span>
       </button>
     </div>
@@ -209,13 +216,13 @@
       <span class="section-rule" aria-hidden="true"></span>
       <span class="section-kicker">À PROPOS · INTRODUCTION</span>
     </div>
-    <h2 class="section-title"><span>Une vision design</span><span class="section-title-em">augmentée par l'IA</span></h2>
+    <h2 class="section-title"><span id="about-title-main">Une vision design</span><span class="section-title-em" id="about-title-em">augmentée par l'IA</span></h2>
   </header>
 
   <!-- CREATIVE -->
   <div class="mode-panel show-creative">
     <div class="about-grid">
-      <aside class="about-side">
+      <aside class="about-side" aria-label="Informations profil créatif">
         <div class="about-quote">
           <span class="about-quote-mark" aria-hidden="true">"</span>
           <p>Mettre la créativité au service de projets <em>ambitieux</em>, du logo au site, du portrait dessiné à l'écosystème digital.</p>
@@ -309,6 +316,44 @@
       </div>
     </div>
   </div>
+
+  <!-- IA & FORMATION -->
+  <div class="mode-panel show-ai">
+    <div class="about-grid about-grid--ai">
+      <aside class="about-side" aria-label="Informations profil IA">
+        <div class="about-quote about-quote--ai">
+          <span class="about-quote-mark" aria-hidden="true">"</span>
+          <p>Rendre l'intelligence artificielle <em>compréhensible</em>, utile et directement applicable aux réalités métier.</p>
+        </div>
+        <div class="about-meta-list">
+          <div class="about-meta-item"><span>PROFIL</span><span>Formateur IA indépendant</span></div>
+          <div class="about-meta-item"><span>BASE</span><span>Bordeaux, France</span></div>
+          <div class="about-meta-item"><span>FORMAT</span><span>Présentiel · Distanciel</span></div>
+          <div class="about-meta-item"><span>PUBLICS</span><span>Entreprises · Professionnels · Créatifs</span></div>
+        </div>
+      </aside>
+      <div class="about-body">
+        <p class="about-lead">Directeur artistique digital, webdesigner et formateur en IA, je relie pédagogie, création et usages professionnels pour transmettre une utilisation concrète des outils d'intelligence artificielle.</p>
+        <p>Mon approche privilégie la pratique : comprendre les capacités et les limites des modèles, structurer des prompts professionnels, gagner en productivité, créer des contenus, prototyper, automatiser des tâches et développer avec l'assistance de l'IA.</p>
+        <a class="ai-profile-link" href="https://senza-formations.com/formateur/profil-606-anthony" target="_blank" rel="noopener noreferrer" data-magnetic>
+          <span>Voir mon profil formateur SENZA</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+        <div class="about-tags">
+          <span>IA générative</span>
+          <span>ChatGPT</span>
+          <span>Claude</span>
+          <span>Gemini</span>
+          <span>Prompt engineering</span>
+          <span>Productivité</span>
+          <span>Création de contenus</span>
+          <span>Automatisation</span>
+          <span>Développement assisté par IA</span>
+          <span>Modèles locaux</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
@@ -317,7 +362,7 @@
     <div class="section-head-meta">
       <span class="section-num">02</span>
       <span class="section-rule" aria-hidden="true"></span>
-      <span class="section-kicker">PARCOURS · EXPÉRIENCES & FORMATIONS</span>
+      <span class="section-kicker">PARCOURS · EXPÉRIENCES &amp; FORMATIONS</span>
     </div>
     <h2 class="section-title"><span>Une trajectoire</span><span class="section-title-em">design + IA</span></h2>
     <p class="section-lead">Du graphisme freelance à la direction artistique d'écosystèmes digitaux assistés par IA.</p>
@@ -427,7 +472,7 @@
         <span class="section-rule" aria-hidden="true"></span>
         <span class="section-kicker">FORMATIONS</span>
       </div>
-      <h3 class="section-title section-title--small">Diplômes & cursus</h3>
+      <h3 class="section-title section-title--small">Diplômes &amp; cursus</h3>
     </header>
     <div class="edu-grid">
       <article class="edu-card">
@@ -443,7 +488,7 @@
         <div class="edu-body">
           <div class="edu-degree">Master Management de Projet UX</div>
           <div class="edu-school">ISCOD</div>
-          <div class="edu-note">Stratégie & UX</div>
+          <div class="edu-note">Stratégie &amp; UX</div>
         </div>
       </article>
     </div>
@@ -610,9 +655,9 @@
     <div class="section-head-meta">
       <span class="section-num">04</span>
       <span class="section-rule" aria-hidden="true"></span>
-      <span class="section-kicker">PROJETS · SÉLECTION</span>
+      <span class="section-kicker" id="projects-kicker">PROJETS · SÉLECTION</span>
     </div>
-    <h2 class="section-title"><span>Sélection de projets</span><span class="section-title-em" id="projects-em">créatifs &amp; digitaux</span></h2>
+    <h2 class="section-title"><span id="projects-title-main">Sélection de projets</span><span class="section-title-em" id="projects-em">créatifs &amp; digitaux</span></h2>
     <p class="section-lead" id="projects-lead">Studio, branding, sites, interfaces, IA et co-créations artistiques.</p>
   </header>
 
@@ -1016,6 +1061,115 @@
 
     </div>
   </div>
+
+  <!-- IA & FORMATION DOMAINS -->
+  <div class="mode-panel show-ai">
+    <div class="projects-grid projects-grid--ai">
+
+      <article class="project-card project-card--ai project-card--feature" style="--p-i:0">
+        <div class="project-card-head">
+          <span class="project-card-num">01</span>
+          <span class="project-card-kicker">OUTILS · MODÈLES · USAGES</span>
+        </div>
+        <div class="project-card-visual" data-glyph="AI">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <path d="M46 78 H92 V48 H154 V102 H112 V152 H46 Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <circle cx="46" cy="78" r="5" fill="currentColor"/>
+            <circle cx="92" cy="48" r="4" fill="currentColor"/>
+            <circle cx="154" cy="102" r="5" fill="currentColor"/>
+            <circle cx="112" cy="152" r="4" fill="currentColor"/>
+            <path d="M72 110 H128 M100 78 V128" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 6"/>
+          </svg>
+          <span class="project-card-glyph">IA</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">IA générative &amp; outils professionnels</h3>
+          <p class="project-card-desc">Comprendre et utiliser efficacement ChatGPT, Claude, Gemini et les principaux modèles génératifs dans un contexte professionnel.</p>
+          <div class="project-card-foot">
+            <div class="project-card-tags"><span>ChatGPT</span><span>Claude</span><span>Gemini</span></div>
+            <a class="project-card-cta-pill" href="https://senza-formations.com/formateur/profil-606-anthony" target="_blank" rel="noopener noreferrer">
+              Voir mon profil formateur SENZA <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card project-card--ai" style="--p-i:1">
+        <div class="project-card-head">
+          <span class="project-card-num">02</span>
+          <span class="project-card-kicker">PROMPTS · MÉTHODES</span>
+        </div>
+        <div class="project-card-visual" data-glyph="P">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <rect x="42" y="54" width="116" height="92" rx="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M66 82 H126 M66 104 H136 M66 126 H108" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="146" cy="82" r="4" fill="currentColor"/>
+            <circle cx="120" cy="126" r="4" fill="currentColor"/>
+          </svg>
+          <span class="project-card-glyph">PM</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Prompting &amp; productivité</h3>
+          <p class="project-card-desc">Structurer des prompts fiables, créer des méthodes réutilisables et intégrer l'IA dans les tâches quotidiennes et les processus métier.</p>
+          <div class="project-card-foot">
+            <div class="project-card-tags"><span>Prompting</span><span>Méthodes</span><span>Productivité</span></div>
+            <span class="project-card-arrow" aria-hidden="true">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card project-card--ai" style="--p-i:2">
+        <div class="project-card-head">
+          <span class="project-card-num">03</span>
+          <span class="project-card-kicker">CONTENU · DESIGN · IDÉATION</span>
+        </div>
+        <div class="project-card-visual" data-glyph="C">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <path d="M54 132 C68 78 96 58 144 62 C132 92 148 118 104 144 C88 154 68 148 54 132 Z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M72 128 C92 114 102 90 132 76" fill="none" stroke="currentColor" stroke-width="0.9" stroke-dasharray="3 6"/>
+            <circle cx="144" cy="62" r="4" fill="currentColor"/>
+            <circle cx="54" cy="132" r="4" fill="currentColor"/>
+          </svg>
+          <span class="project-card-glyph">DA</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Création de contenus augmentée</h3>
+          <p class="project-card-desc">Utiliser l'IA pour la recherche, la rédaction, l'idéation, la direction artistique, la création visuelle et le prototypage.</p>
+          <div class="project-card-foot">
+            <div class="project-card-tags"><span>Contenu</span><span>Design</span><span>Créativité</span></div>
+            <span class="project-card-arrow" aria-hidden="true">↗</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card project-card--ai" style="--p-i:3">
+        <div class="project-card-head">
+          <span class="project-card-num">04</span>
+          <span class="project-card-kicker">WORKFLOWS · ASSISTANTS · CODE</span>
+        </div>
+        <div class="project-card-visual" data-glyph="W">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <rect x="36" y="62" width="44" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1.3"/>
+            <rect x="120" y="62" width="44" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1.3"/>
+            <rect x="78" y="122" width="44" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M80 80 H120 M58 96 V139 H78 M142 96 V139 H122" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            <circle cx="100" cy="80" r="4" fill="currentColor"/>
+            <circle cx="100" cy="139" r="4" fill="currentColor"/>
+          </svg>
+          <span class="project-card-glyph">n8n</span>
+        </div>
+        <div class="project-card-body">
+          <h3 class="project-card-title">Automatisation &amp; développement assisté</h3>
+          <p class="project-card-desc">Découvrir les workflows IA, les assistants spécialisés, n8n, les modèles locaux et le développement assisté avec Codex, Claude Code et Antigravity.</p>
+          <div class="project-card-foot">
+            <div class="project-card-tags"><span>Automatisation</span><span>n8n</span><span>Vibe coding</span></div>
+            <span class="project-card-arrow" aria-hidden="true">↗</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -1074,7 +1228,7 @@
       <span>© 2026 Tony Creative Design — Bordeaux</span>
     </div>
     <div class="footer-block footer-block--center">FR · Indépendant · Tous droits réservés</div>
-    <div class="footer-block footer-block--right">v1.1 · 2026</div>
+    <div class="footer-block footer-block--right">v2.1 · 2026</div>
   </div>
 </footer>
 
