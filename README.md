@@ -1,60 +1,100 @@
-# Tony Creative Design — CV Portfolio
+# Anthony Pereira — CV / Portfolio
 
-CV / Portfolio web dynamique, futuriste et premium pour **Anthony PEREIRA** (Tony Creative Design), incluant son positionnement de formateur en intelligence artificielle.
+CV et portfolio interactif d'**Anthony Pereira** — directeur créatif, designer
+d'expériences numériques, orchestrateur IA et formateur (Bordeaux).
+
+Concept : **un profil · cinq territoires**.
+
+## Les cinq territoires
+
+| # | Territoire | Idée directrice |
+|---|---|---|
+| 01 | Direction créative | Construire une vision |
+| 02 | IA & Formation | Partir du métier. Construire l'outil. Transmettre l'usage. |
+| 03 | Business | Structurer la production |
+| 04 | Atelier artistique | Créer avant d'en faire un métier |
+| 05 | Collaborations | Connecter les disciplines |
+
+Territoire par défaut : **Direction créative**.
+
+Chaque territoire modifie le message, l'atmosphère visuelle, la hiérarchie de
+contenu, la sélection de projets, l'ordre des familles de compétences, la lecture
+du parcours, le CTA et le langage de mouvement — pas seulement la couleur.
 
 ## Ouverture locale
 
-1. Naviguer vers ce dossier dans le Finder ou le terminal
-2. Ouvrir `index.html` dans un navigateur :
-   - Double-clic sur `index.html`
-   - Ou : `open index.html` dans le terminal
+Un serveur statique est recommandé (le routage par hash et le rendu des
+territoires fonctionnent aussi en `file://`, mais le serveur reflète la
+production) :
 
-Aucun serveur requis. Aucune dépendance.
-
-## Publication GitHub Pages
-
-Dépôt recommandé : `anthony-pereira-cv`
-
-URL prévue après activation de GitHub Pages :
-
-```text
-https://<owner-github>.github.io/anthony-pereira-cv/
+```bash
+python3 -m http.server 8080
+# http://localhost:8080/
 ```
 
-Configuration attendue : branche `main`, dossier racine `/`.
+## URLs partageables
+
+Chaque territoire possède une URL directe :
+
+```text
+#direction-creative   (défaut)
+#ia-formation
+#business
+#atelier
+#collaborations
+```
+
+Navigation avant/arrière du navigateur supportée, sans rechargement de page.
 
 ## Structure
 
 ```
 CV/
-├── index.html      — Page principale
-├── style.css       — Design system & styles (4 modes)
-├── script.js       — Logique interactive
+├── index.html      — Ossature statique (identité, parcours, expertise, contact)
+├── style.css       — Design system + 5 thèmes de territoire
+├── script.js       — Modèle de données, rendu des blocs, interactions
 ├── README.md       — Ce fichier
 └── assets/
     ├── img/
     └── icons/
+        └── favicon.png   — marque TCD, référencée en chemin relatif
 ```
+
+Le favicon est un fichier local référencé en chemin relatif
+(`assets/icons/favicon.png`) afin de se résoudre correctement sous le
+sous-chemin projet de GitHub Pages et de ne dépendre d'aucun hébergement
+externe.
+
+### Architecture
+
+- `index.html` porte l'ossature partagée et le contenu indexable : identité,
+  parcours (essentiel + complet), familles de compétences, outils, contact,
+  données structurées `schema.org/Person`, et un repli `<noscript>` listant les
+  projets.
+- `script.js` contient le modèle de données central — registre de projets,
+  familles de compétences, définition des cinq territoires — et un moteur de
+  rendu par blocs typés (`feature`, `projects`, `pillars`, `field`, `process`,
+  `levels`, `branches`, `gallery`, `convergence`, `openfield`, `note`).
+- `style.css` définit les tokens de base puis un jeu de tokens par territoire
+  (`[data-territory="…"]`), incluant rayon, tension typographique, rythme
+  vertical et cadence d'animation.
 
 ## Fonctionnalités
 
-- **4 modes visuels** : Profil créatif · Business · Collaboration · IA & Formation
-- Design futuriste premium
-- Responsive mobile / tablette / desktop
-- Micro-animations & transitions fluides
-- Timeline expériences
-- Grille projets
-- Domaines d'intervention IA & formation
-- Badges compétences
-- Navigation fixe
-- Scroll reveal
+- Navigateur de territoires accessible (rôle `tablist`, navigation clavier)
+- Routage par hash + historique navigateur
+- Hiérarchie de projets pondérée (produit phare, cas web, travaux mineurs)
+- Parcours essentiel avec dépliage du parcours complet
+- Compétences par familles, outils en couche secondaire
+- Reveal au scroll, cadence propre à chaque territoire
+- Support complet de `prefers-reduced-motion`
+- Responsive 360px → 1440px+
 
 ## Technologies
 
-- HTML5 / CSS3 / JavaScript vanilla
-- Google Fonts (Inter, Space Grotesk)
-- Aucun framework, aucun backend
+HTML5 / CSS3 / JavaScript vanilla. Google Fonts (Inter, Space Grotesk,
+JetBrains Mono). Aucun framework, aucune dépendance, aucun build.
 
 ---
 
-© Tony Creative Design — Bordeaux
+© 2026 Anthony Pereira — Tony Creative Design · Bordeaux
