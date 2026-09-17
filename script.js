@@ -92,7 +92,7 @@
     },
     studio341: {
       name: '341STUDIO',
-      url: 'https://www.tonycreativedesign.fr/creation-site-web-bordeaux/',
+      url: 'https://www.341studio.com/',
       context: 'Projet culturel propriétaire',
       kicker: 'DIRECTION ARTISTIQUE · CULTURE',
       desc: 'Territoire créatif et culturel mené en propre, autour de la musique et de l’image : direction artistique et conception visuelle.',
@@ -119,7 +119,7 @@
     },
     emna: {
       name: 'EMNA',
-      url: null,
+      url: 'https://emna.tpopsite.com/',
       context: 'Projet client',
       kicker: 'IDENTITÉ & SUPPORTS',
       desc: 'Projet client en identité visuelle et supports de communication.',
@@ -155,7 +155,9 @@
     },
     chroma: {
       name: 'Chroma Studio',
-      url: null,
+      /* Anchor on the TCD Web & Expériences page: #chroma is the site's own
+         spacer anchor, sitting 65–147px above the CHROMA STUDIO heading. */
+      url: 'https://www.tonycreativedesign.fr/creation-site-web-bordeaux/#chroma',
       context: 'Projet propriétaire',
       kicker: 'APPLICATION · EXPLORATION D’INTERFACE',
       desc: 'Application de création de palettes chromatiques — une exploration d’interface et d’outil de design pensée comme un objet numérique autonome.',
@@ -597,7 +599,7 @@
           kicker: 'EXEMPLE',
           title: '341STUDIO · NightFury · 341Records',
           text: 'Un territoire créatif et culturel mené discrètement en parallèle, autour de la musique et de l’image. Il illustre le type de collaboration qui ne rentre dans aucune des quatre cases précédentes — et qui m’intéresse précisément pour cette raison.',
-          link: { label: 'Voir le contexte', href: 'https://www.tonycreativedesign.fr/creation-site-web-bordeaux/', external: true }
+          link: { label: 'Voir le contexte', href: 'https://www.341studio.com/', external: true }
         }
       ]
     }
